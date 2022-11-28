@@ -30,7 +30,13 @@ if (args.h){
 }
 
 
-
+if (args.n) {
+    latitude = args.n
+} else if (args.s) {
+    latitude = args.s
+} else {
+    console.log("Latitude must be in range")
+}
 
 
 // Make a request
