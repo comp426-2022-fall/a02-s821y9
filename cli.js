@@ -30,6 +30,12 @@ if (args.h){
 }
 
 
+
+if (args.z) {
+    timezone = args.z
+}
+
+let latitude = '0'
 if (args.n) {
     latitude = args.n
 } else if (args.s) {
@@ -37,6 +43,16 @@ if (args.n) {
 } else {
     console.log("Latitude must be in range")
 }
+
+let longitude = '0'
+if (args.e) {
+    longitude = args.e
+} else if (args.w) {
+    longitude = args.w
+} else {
+    console.log("Longitude must be in range")
+}
+
 
 
 // Make a request
@@ -52,20 +68,17 @@ const data = await response.json();
 
 if (args.j) {
     console.log(data);
+    process.exit(0);
 }
 
-if (!args.h && !args.j) {
-    console.log(data)
-
-    const days = args.d
-
-    if (days == 0) {
-        console.log("today.")
-    } else if (days > 1) {
-        console.log("in " + days + " days.")
-    } else {
-        console.log("tomorrow.")
-    }
+const days = args.d
+if (days == 0) {
+    console.log("today.")
+} else if (days > 1) {
+    console.log("in " + days + " days.")
+} else {
+    console.log("tomorrow.")
+}
 
 
 }
