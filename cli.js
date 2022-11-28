@@ -5,18 +5,19 @@ import nodefetch from "node-fetch";
 import moment from "moment-timezone";
 
 const args = minimist(process.argv.slice(2));
-let latitude;
-let longitude;
+var timezone = moment.tz.guess();
+
 
 if(args.h){
-  	console.log(`Usage: galosh.js [options] -[n|s] LATITUDE -[e|w] LONGITUDE -z TIME_ZONE
-    -h            Show this help message and exit.
-    -n, -s        Latitude: N positive; S negative.
-    -e, -w        Longitude: E positive; W negative.
-    -z            Time zone: uses tz.guess() from moment-timezone by default.
-    -d 0-6        Day to retrieve weather: 0 is today; defaults to 1.
-    -j            Echo pretty JSON from open-meteo API and exit.
-    `);
+  	console.log(`
+		Usage: galosh.js [options] -[n|s] LATITUDE -[e|w] LONGITUDE -z TIME_ZONE
+		    -h            Show this help message and exit.
+		    -n, -s        Latitude: N positive; S negative.
+		    -e, -w        Longitude: E positive; W negative.
+		    -z            Time zone: uses tz.guess() from moment-timezone by default.
+		    -d 0-6        Day to retrieve weather: 0 is today; defaults to 1.
+		    -j            Echo pretty JSON from open-meteo API and exit.
+		    `);
 }else{
 	let latitude = '0';
 	if(args.n){
@@ -40,7 +41,7 @@ if(args.h){
 		console.log("Longtitude must be in range")
 	}
 
-	var timezone = moment.tz.guess();
+	
 	if(args.z){
     		timezone = args.z;
 	}
