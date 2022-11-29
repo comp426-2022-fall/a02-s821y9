@@ -20,8 +20,7 @@ if(args.h){
 		    `);
 }else{
 	
-	
-	
+	//latitude	
 	let latitude = '0';
 	if(args.n){
 		latitude = args.n;
@@ -34,8 +33,7 @@ if(args.h){
 	}
 	
 	
-	
-
+	//longtitude
 	let longtitude = '0';
 	if(args.e){
 		longtitude = args.e;
