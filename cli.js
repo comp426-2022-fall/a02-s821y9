@@ -55,6 +55,9 @@ if(args.h){
 
 	const response = await nodefetch('https://api.open-meteo.com/v1/forecast?latitude=' + latitude + '&longitude=' + longtitude + '&daily=weathercode,temperature_2m_max,temperature_2m_min,apparent_temperature_max,precipitation_sum&timezone=' + timezone);
 
+	
+	
+	
 	const data = await response.json();
 
 	if (args.j) {
