@@ -19,6 +19,9 @@ if(args.h){
 		    -j            Echo pretty JSON from open-meteo API and exit.
 		    `);
 }else{
+	
+	
+	
 	let latitude = '0';
 	if(args.n){
 		latitude = args.n;
@@ -29,6 +32,9 @@ if(args.h){
 	}else{
 		console.log("Latitude must be in range");
 	}
+	
+	
+	
 
 	let longtitude = '0';
 	if(args.e){
