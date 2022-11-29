@@ -16,6 +16,9 @@
     "url": "https://github.com/comp426-2022-fall/a02-s821y9/issues"
   },
   "homepage": "https://github.com/comp426-2022-fall/a02-s821y9#readme",
+  "keywords": {
+    "keywords"
+  },
  "dependencies": {
     "minimist": "^1.2.6",
     "moment-timezone": "^0.5.37",
