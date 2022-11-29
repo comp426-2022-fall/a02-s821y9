@@ -45,7 +45,7 @@ if(args.h){
 		console.log("Longtitude must be in range")
 	}
 
-	
+	//timezone
 	if(args.z){
     		timezone = args.z;
 	}
